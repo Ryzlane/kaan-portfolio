@@ -1,0 +1,44 @@
+.global-cursor-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .cursor {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #192dfb;
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.13, 1.04, 0.74, 1.07);
+  }
+  
+  .cursor.is-hold {
+    background-color: #fff;
+    width: 7px;
+    height: 7px;
+  }
+  
+  .cursor-around {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #192dfb;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.13, 1.04, 0.74, 1.07);
+  }
+  
+  .cursor-around.is-hold {
+    width: 30px;
+    height: 30px;
+    background-color: #192cfb80;
+  }
+}
