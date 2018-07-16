@@ -1,6 +1,9 @@
 import React from 'react'
+import 'styles/style.scss'
+
+import Background from 'components/Background'
 
 const Home = () =>
-  <div>I am the home</div>
+  <Background backgroundState='initial' />
 
   export default Home

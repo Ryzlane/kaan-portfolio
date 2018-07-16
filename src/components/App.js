@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Home } from 'components/Components'
+import Home from './Home'
 
 const App = () =>
   <Router>

@@ -1,0 +1,45 @@
+@import './reset.scss';
+
+// COLORS
+    $eletric_blue: #192dfb;
+    $soft_grey: #525252;
+    $deep_grey: #323232;
+    $beige: #fcf9f4;
+    $white: #d8d8d8;
+
+// TEXT
+.about-text {
+  font-family: Muli;
+  font-size: 30px;
+  font-weight: 600;
+  color: $soft_grey;
+}
+
+.brief-project {
+  font-family: Muli;
+  font-size: 18px;
+  line-height: 2;
+  color: $deep_grey;
+}
+
+.project-titlesection {
+  font-family: Muli;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: $eletric_blue;
+}
+
+.comment {
+  font-family: Muli;
+  font-size: 16px;
+  line-height: 2;
+  color: #9b9b9b;
+}
+
+.regular-text {
+  font-family: Muli;
+  font-size: 16px;
+  line-height: 2;
+  color: $soft_grey;
+}
