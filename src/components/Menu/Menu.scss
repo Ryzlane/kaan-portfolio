@@ -1,0 +1,14 @@
+@import 'styles/generic.scss';
+
+.menu {
+  position: absolute;
+  top: 50px;
+  right: 250px;
+  width: 175px;
+
+  .menu__menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

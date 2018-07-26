@@ -1,0 +1,21 @@
+@import 'styles/generic.scss';
+
+.menu__menu-item {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  &:hover {
+    polygon, rect {
+      stroke: $electric_blue !important;
+      fill: $electric_blue !important;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
