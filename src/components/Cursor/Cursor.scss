@@ -1,5 +1,26 @@
 @import 'styles/generic.scss';
 
+.global-cursor-container.is-hover-menu {
+  .cursor {
+    display: none;
+  }
+
+  .cursor-around.work {
+    left: 484px !important;
+    top: 80px !important;
+    width: 80px;
+    height: 80px;
+
+  }
+  
+  .cursor-around.about {
+    left: 599px !important;
+    top: 80px !important;
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .global-cursor-container {
   position: absolute;
   width: 100%;

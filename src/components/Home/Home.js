@@ -10,19 +10,20 @@ import MenuItem from 'components/Menu/MenuItem/MenuItem'
   constructor(props) {
     super(props)
     this.state = {
-      isHoverMenu: false
+      isHoverMenu: false,
+      isHoverMenuType: ''
     }
 
     this.handleHoverMenu = this.handleHoverMenu.bind(this)
     this.handleLeaveMenu = this.handleLeaveMenu.bind(this)
   }
 
-  handleHoverMenu() {
-    this.setState({ isHoverMenu: true })
+  handleHoverMenu(menuType) {
+    this.setState({ isHoverMenu: true, isHoverMenuType: menuType })
   }
 
   handleLeaveMenu() {
-    this.setState({ isHoverMenu: false })
+    this.setState({ isHoverMenu: false, isHoverMenuType: '' })
   }
 
   render() {
@@ -30,7 +31,7 @@ import MenuItem from 'components/Menu/MenuItem/MenuItem'
       <div className='background-container'>
         <Background backgroundState='initial'/>
         <div className="global-container">
-          <Cursor isHoverMenu={this.state.isHoverMenu} />
+          <Cursor isHoverMenu={this.state.isHoverMenu} isHoverMenuType={this.state.isHoverMenuType} />
           <Menu>
             <div className='menu__menu-container'>
               <MenuItem menuType='work' isHoverMenu={this.state.isHoverMenu} handleHoverMenu={this.handleHoverMenu} handleLeaveMenu={this.handleLeaveMenu} />
