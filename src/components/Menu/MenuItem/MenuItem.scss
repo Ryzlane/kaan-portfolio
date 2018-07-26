@@ -1,15 +1,38 @@
 @import 'styles/generic.scss';
 
+@keyframes hover_rotation {
+  0% { transform: translateX(-50%) translateY(-50%) rotate(0deg) };
+  100% { transform: translateX(-50%) translateY(-50%) rotate(360deg) };
+}
+
 .menu__menu-item {
   position: relative;
   width: 60px;
   height: 60px;
   cursor: pointer;
+
   &:hover {
     polygon, rect {
       stroke: $electric_blue !important;
       fill: $electric_blue !important;
     }
+    img {
+      display: inherit;
+      pointer-events: none;
+      animation-name: hover_rotation;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+  img {
+    display: none;
+    max-width: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   svg {

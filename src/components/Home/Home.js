@@ -19,14 +19,10 @@ import MenuItem from 'components/Menu/MenuItem/MenuItem'
 
   handleHoverMenu() {
     this.setState({ isHoverMenu: true })
-    console.log('hover')
-    console.log(this.state.isHoverMenu)
   }
 
   handleLeaveMenu() {
     this.setState({ isHoverMenu: false })
-    console.log('not hover')
-    console.log(this.state.isHoverMenu)
   }
 
   render() {
@@ -37,8 +33,8 @@ import MenuItem from 'components/Menu/MenuItem/MenuItem'
           <Cursor isHoverMenu={this.state.isHoverMenu} />
           <Menu>
             <div className='menu__menu-container'>
-              <MenuItem menuType='work' handleHoverMenu={this.handleHoverMenu} handleLeaveMenu={this.handleLeaveMenu} />
-              <MenuItem menuType='about' handleHoverMenu={this.handleHoverMenu} handleLeaveMenu={this.handleLeaveMenu} />
+              <MenuItem menuType='work' isHoverMenu={this.state.isHoverMenu} handleHoverMenu={this.handleHoverMenu} handleLeaveMenu={this.handleLeaveMenu} />
+              <MenuItem menuType='about' isHoverMenu={this.state.isHoverMenu} handleHoverMenu={this.handleHoverMenu} handleLeaveMenu={this.handleLeaveMenu} />
             </div>
           </Menu>
         </div>

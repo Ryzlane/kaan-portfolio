@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
+import WorkCircle from 'assets/menu/work-hover.png'
+import AboutCircle from 'assets/menu/about-hover.png'
+
 import './MenuItem.scss'
 
 class MenuItem extends React.Component {
@@ -11,13 +14,19 @@ class MenuItem extends React.Component {
         <div className={`menu-item__${menuType}`}>
         {
           menuType === 'work' ?
-            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
-              <polygon fill="none" stroke="#323232" stroke-linejoin="round" points="693.5 0 709 31 678 31" transform="translate(-677)"/>
-            </svg>
+            <div>
+              <img src={WorkCircle} alt="work circle"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+                <polygon fill="none" stroke="#323232" strokeLinejoin="round" points="693.5 0 709 31 678 31" transform="translate(-677)"/>
+              </svg>
+            </div>
           :
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
-              <rect width="30" height="30" x="786.5" y=".5" fill="none" stroke="#323232" rx="1" transform="translate(-786)"/>
-            </svg>
+            <div>
+              <img src={AboutCircle} alt="about circle"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+                <rect width="30" height="30" x="786.5" y=".5" fill="none" stroke="#323232" rx="1" transform="translate(-786)"/>
+              </svg>
+            </div>
         }
         </div>
       </div>
