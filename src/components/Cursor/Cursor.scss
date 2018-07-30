@@ -5,19 +5,10 @@
     display: none;
   }
 
-  .cursor-around.work {
-    left: 668px !important;
-    top: 80px !important;
-    width: 80px;
-    height: 80px;
-
-  }
-  
-  .cursor-around.about {
-    left: 783px !important;
-    top: 80px !important;
-    width: 80px;
-    height: 80px;
+  .cursor-around {
+    width: 80px !important;
+    height: 80px !important;
+    transform: translateX(-12%) translateY(-12%);
   }
 }
 

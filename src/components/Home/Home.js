@@ -11,31 +11,52 @@ import MenuItem from 'components/Menu/MenuItem/MenuItem'
     super(props)
     this.state = {
       isHoverMenu: false,
-      isHoverMenuType: ''
+      isHoverMenuType: '',
+      menuItem: undefined // to retrieve the position of the element we are hover and send it to cursor
     }
 
     this.handleHoverMenu = this.handleHoverMenu.bind(this)
     this.handleLeaveMenu = this.handleLeaveMenu.bind(this)
   }
 
-  handleHoverMenu(menuType) {
-    this.setState({ isHoverMenu: true, isHoverMenuType: menuType })
+  handleHoverMenu(menuItem) {
+    this.setState({
+      isHoverMenu: true,
+      menuItem: menuItem
+    })
   }
 
   handleLeaveMenu() {
-    this.setState({ isHoverMenu: false, isHoverMenuType: '' })
+    this.setState({
+      isHoverMenu: false,
+      menuItem: undefined
+    })
   }
 
   render() {
+    const isHoverMenuPosition = this.state.menuItem ? this.state.menuItem.current.getBoundingClientRect() : ''
     return (
       <div className='background-container'>
         <Background backgroundState='initial'/>
         <div className="global-container">
-          <Cursor isHoverMenu={this.state.isHoverMenu} isHoverMenuType={this.state.isHoverMenuType} />
+          <Cursor 
+            isHoverMenu={this.state.isHoverMenu} 
+            isHoverMenuPosition={isHoverMenuPosition}
+          />
           <Menu>
             <div className='menu__menu-container'>
-              <MenuItem menuType='work' isHoverMenu={this.state.isHoverMenu} handleHoverMenu={this.handleHoverMenu} handleLeaveMenu={this.handleLeaveMenu} />
-              <MenuItem menuType='about' isHoverMenu={this.state.isHoverMenu} handleHoverMenu={this.handleHoverMenu} handleLeaveMenu={this.handleLeaveMenu} />
+              <MenuItem 
+                menuType='work'
+                isHoverMenu={this.state.isHoverMenu}
+                handleHoverMenu={this.handleHoverMenu}
+                handleLeaveMenu={this.handleLeaveMenu}
+              />
+              <MenuItem 
+                menuType='about'
+                isHoverMenu={this.state.isHoverMenu}
+                handleHoverMenu={this.handleHoverMenu}
+                handleLeaveMenu={this.handleLeaveMenu}
+              />
             </div>
           </Menu>
         </div>

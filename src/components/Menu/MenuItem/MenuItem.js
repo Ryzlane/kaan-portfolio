@@ -7,10 +7,15 @@ import AboutCircle from 'assets/menu/about-hover.png'
 import './MenuItem.scss'
 
 class MenuItem extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.menuItem = React.createRef()
+  }
   render() {
     const { menuType, handleHoverMenu, handleLeaveMenu } = this.props
     return (
-      <div className='menu__menu-item' onMouseEnter={() => { handleHoverMenu(menuType) }} onMouseLeave={() => { handleLeaveMenu() }}>
+      <div ref={this.menuItem} className='menu__menu-item' onMouseEnter={() => { handleHoverMenu(this.menuItem) }} onMouseLeave={() => { handleLeaveMenu() }}>
         <div className={`menu-item__${menuType}`}>
         {
           menuType === 'work' ?
