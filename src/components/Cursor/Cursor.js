@@ -21,7 +21,6 @@ class Cursor extends React.Component {
     if (isHoverMenuPosition !== prevProps.isHoverMenuPosition) {
       this.cursorAround.current.style.left = isHoverMenuPosition.left + 'px'
       this.cursorAround.current.style.top = isHoverMenuPosition.top + 'px'
-      console.log('coucou')
     }
   }
 
@@ -44,10 +43,8 @@ class Cursor extends React.Component {
   }
 
   render() {
-    const { isHoverMenu, isHoverMenuPosition } = this.props
+    const { isHoverMenu } = this.props
     let positions = {}
-    console.log(isHoverMenuPosition)
-    console.log(positions)
     return (
       <div  ref={this.globalCursorContainer} 
             className={`global-cursor-container ${isHoverMenu === true && 'is-hover-menu'}`}
@@ -56,6 +53,7 @@ class Cursor extends React.Component {
             onMouseUp={this.handleMouseUp}>
         <div ref={this.cursorAround} className='cursor-around' style={{ background: positions  }}></div>
         <div ref={this.cursor} className='cursor'></div>
+        {this.props.children}
       </div>
     )
   }
@@ -63,7 +61,8 @@ class Cursor extends React.Component {
 
 Cursor.propTypes = {
   isHoverMenu: PropTypes.bool,
-  isHoverMenuPosition: PropTypes.object
+  isHoverMenuPosition: PropTypes.string,
+  children: PropTypes.element.isRequired
 }
 
 export default Cursor
