@@ -3,8 +3,7 @@ import './Container.scss'
 
 import Background from 'components/Background/Background'
 import Cursor from 'components/Cursor/Cursor'
-import Menu from 'components/Menu/Menu'
-import MenuItem from 'components/Menu/MenuItem/MenuItem'
+import Header from 'components/Header/Header'
 import Home from 'components/Container/Home/Home'
 
  class Container extends React.Component {
@@ -47,22 +46,11 @@ import Home from 'components/Container/Home/Home'
           <Home />
         </div>
         </Cursor>
-        <Menu>
-          <div className='menu__menu-container'>
-            <MenuItem 
-              menuType='work'
-              isHoverMenu={this.state.isHoverMenu}
-              handleHoverMenu={this.handleHoverMenu}
-              handleLeaveMenu={this.handleLeaveMenu}
-            />
-            <MenuItem 
-              menuType='about'
-              isHoverMenu={this.state.isHoverMenu}
-              handleHoverMenu={this.handleHoverMenu}
-              handleLeaveMenu={this.handleLeaveMenu}
-            />
-          </div>
-        </Menu>
+        <Header
+          isHoverMenu={this.state.isHoverMenu}
+          handleHoverMenu={this.handleHoverMenu}
+          handleLeaveMenu={this.handleLeaveMenu}
+        />
       </div>
     )
   }
