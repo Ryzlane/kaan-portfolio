@@ -1,4 +1,5 @@
 import React from 'react'
+import './Header.scss'
 
 import Menu from './Menu/Menu'
 import MenuItem from './Menu/MenuItem/MenuItem'
