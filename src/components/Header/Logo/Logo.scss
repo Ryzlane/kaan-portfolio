@@ -3,25 +3,43 @@
 .logo {
   pointer-events: initial;
   position: relative;
+  margin-left: 15px;
   width: 75px;
   height: 30px;
+
+  .logo__crown {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+
+  #logo__frame {
+    transition: all 1s;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
 
   .logo__text {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-
-    &:hover {
-      svg {
-        fill: $electric_blue;
-      }
-    }
   }
 
-  #logo__frame {
-    position: absolute;
-    left: 0;
-    top: 0;
+  &:hover {
+    .logo__text svg g {
+      transition: all 1.5s;
+      stroke: $electric_blue;
+    }
+
+    .logo__crown {
+      transform: translateX(-50%) translateY(-100%);
+    }
   }
 }
