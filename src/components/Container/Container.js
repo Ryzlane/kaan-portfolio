@@ -11,7 +11,6 @@ import Home from 'components/Container/Home/Home'
     super(props)
     this.state = {
       isHoverMenu: false,
-      isHoverMenuType: '',
       menuItem: undefined // to retrieve the position of the element we are hover and send it to cursor
     }
 
@@ -34,7 +33,7 @@ import Home from 'components/Container/Home/Home'
   }
 
   render() {
-    const isHoverMenuPosition = this.state.menuItem ? this.state.menuItem.current.getBoundingClientRect() : ''
+    const isHoverMenuPosition = this.state.menuItem ? this.state.menuItem.current.getBoundingClientRect() : undefined
     return (
       <div className='background-container'>
         <Background backgroundState='initial'/>

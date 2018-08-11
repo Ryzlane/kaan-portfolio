@@ -11,7 +11,11 @@ import Logo from './Logo/Logo'
     const { isHoverMenu, handleHoverMenu, handleLeaveMenu } = this.props
     return (
       <header className='header-container'>
-        <Logo />
+        <Logo
+          isHoverMenu={isHoverMenu}
+          handleHoverMenu={handleHoverMenu}
+          handleLeaveMenu={handleLeaveMenu}
+        />
         <Menu>
           <div className='menu__menu-container'>
             <MenuItem 

@@ -16,7 +16,6 @@ class Logo extends React.Component {
 
     this.handleMouseEnter = this.handleMouseEnter.bind(this)
     this.handleMouseLeave = this.handleMouseLeave.bind(this)
-    this.displayCrown = this.displayCrown.bind(this)
   }
 
   componentDidMount() {
@@ -25,18 +24,17 @@ class Logo extends React.Component {
 
   handleMouseEnter() {
     this.state.vivus.play()
-    this.displayCrown()
+
+    this.props.handleHoverMenu()
   }
 
   handleMouseLeave() {
     this.state.vivus.reset()
     this.state.vivus.stop()
+
+    this.props.handleLeaveMenu()
   }
 
-  displayCrown() {
-    console.log('croown!')
-  }
-  
   render() {
     return (
       <div className='logo' onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()}>

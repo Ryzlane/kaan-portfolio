@@ -3,7 +3,7 @@ import React from 'react'
 const LogoText = () => {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" width="60" height="16" viewBox="0 0 60 16">
-        <g fill="#323232" fillOpacity="0" fillRule="evenodd" stroke="#323232" strokeWidth="1" fontFamily="Muli-Black, Muli" fontSize="20" font-weight="700" letter-spacing="1.667" transform="translate(0 -5)">
+        <g fill="#323232" fillOpacity="0" fillRule="evenodd" stroke="#323232" strokeWidth="1" fontFamily="Muli-Black, Muli" fontSize="20" fontWeight="700" letterSpacing="1.667" transform="translate(0 -5)">
           <text>
             <tspan x="0" y="20">K</tspan>
           </text>

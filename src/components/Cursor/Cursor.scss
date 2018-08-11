@@ -2,13 +2,21 @@
 
 .global-cursor-container.is-hover-menu {
   .cursor {
-    display: none;
+    transform: translateX(525%) translateY(525%);
+    width: 5px !important;
+    height: 5px !important;
   }
 
   .cursor-around {
     width: 80px !important;
     height: 80px !important;
     transform: translateX(-12%) translateY(-12%);
+  }
+}
+
+.global-cursor-container.is-hover-logo {
+  .cursor, .cursor-around {
+    display: none;
   }
 }
 
@@ -26,7 +34,6 @@
     height: 10px;
     border-radius: 50%;
     background: $electric_blue;
-    transition-property: color;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.13, 1.04, 0.74, 1.07);
   }

@@ -7,6 +7,10 @@ class Cursor extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      isHoverLogo: false
+    }
+
     this.cursorAround = React.createRef()
     this.cursor = React.createRef()
 
@@ -15,12 +19,15 @@ class Cursor extends React.Component {
     this.handleMouseUp = this.handleMouseUp.bind(this)
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     const { isHoverMenuPosition } = this.props
 
-    if (isHoverMenuPosition !== prevProps.isHoverMenuPosition) {
-      this.cursorAround.current.style.left = isHoverMenuPosition.left + 'px'
-      this.cursorAround.current.style.top = isHoverMenuPosition.top + 'px'
+    if (isHoverMenuPosition) {
+        this.cursorAround.current.style.left = isHoverMenuPosition.left + 'px'
+        this.cursorAround.current.style.top = isHoverMenuPosition.top + 'px'
+        this.cursor.current.style.left = isHoverMenuPosition.left + 'px'
+        this.cursor.current.style.top = isHoverMenuPosition.top + 'px'
+        console.log('not logo')
     }
   }
 
@@ -43,15 +50,15 @@ class Cursor extends React.Component {
   }
 
   render() {
-    const { isHoverMenu } = this.props
-    let positions = {}
+    const { isHoverMenu, isHoverMenuPosition } = this.props
+    let isHoverMenuType = !isHoverMenu ? '' : isHoverMenuPosition ? 'is-hover-menu' : 'is-hover-logo'
     return (
       <div  ref={this.globalCursorContainer} 
-            className={`global-cursor-container ${isHoverMenu === true && 'is-hover-menu'}`}
+            className={`global-cursor-container ${isHoverMenuType}`}
             onMouseMove={this.handleMouseMove}
             onMouseDown={this.handleMouseDown}
             onMouseUp={this.handleMouseUp}>
-        <div ref={this.cursorAround} className='cursor-around' style={{ background: positions  }}></div>
+        <div ref={this.cursorAround} className='cursor-around'></div>
         <div ref={this.cursor} className='cursor'></div>
         {this.props.children}
       </div>
@@ -61,7 +68,7 @@ class Cursor extends React.Component {
 
 Cursor.propTypes = {
   isHoverMenu: PropTypes.bool,
-  isHoverMenuPosition: PropTypes.string,
+  isHoverMenuPosition: PropTypes.element,
   children: PropTypes.element.isRequired
 }
 
