@@ -5,6 +5,7 @@ import './MainTitle.scss'
   render() {
     return (
       <div className='main-title-container'>
+        <h1>k50n</h1>
       </div>
     )
   }
