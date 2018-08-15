@@ -4,18 +4,27 @@ import './Container.scss'
 import Background from 'components/Background/Background'
 import Cursor from 'components/Cursor/Cursor'
 import Header from 'components/Header/Header'
-import Home from 'components/Container/Home/Home'
+import Loader from './Loader/Loader'
+import MainTitle from './MainTitle/MainTitle'
+import Home from './Home/Home'
 
  class Container extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      loaded: false,
       isHoverMenu: false,
       menuItem: undefined // to retrieve the position of the element we are hover and send it to cursor
     }
 
     this.handleHoverMenu = this.handleHoverMenu.bind(this)
     this.handleLeaveMenu = this.handleLeaveMenu.bind(this)
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({loaded: true}, () => console.log('loaded!'));
+    }, 5000)
   }
 
   handleHoverMenu(menuItem) {
@@ -41,11 +50,14 @@ import Home from 'components/Container/Home/Home'
             isHoverMenu={this.state.isHoverMenu} 
             isHoverMenuPosition={isHoverMenuPosition}
         >
-        <div className="global-container">
-          <Home />
-        </div>
+        <Loader />
+            {/* // <div className="global-container">
+            //   <Home />
+            // </div> */}
+        <MainTitle />
         </Cursor>
         <Header
+          isLoaded={this.state.loaded}
           isHoverMenu={this.state.isHoverMenu}
           handleHoverMenu={this.handleHoverMenu}
           handleLeaveMenu={this.handleLeaveMenu}
