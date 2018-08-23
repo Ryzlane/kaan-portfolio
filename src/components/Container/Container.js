@@ -21,12 +21,6 @@ import Home from './Home/Home'
     this.handleLeaveMenu = this.handleLeaveMenu.bind(this)
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({loaded: true}, () => console.log('loaded!'));
-    }, 5000)
-  }
-
   handleHoverMenu(menuItem) {
     this.setState({
       isHoverMenu: true,
@@ -50,11 +44,12 @@ import Home from './Home/Home'
             isHoverMenu={this.state.isHoverMenu} 
             isHoverMenuPosition={isHoverMenuPosition}
         >
-        <Loader />
-            {/* // <div className="global-container">
-            //   <Home />
-            // </div> */}
-        <MainTitle />
+          <Loader>
+            <div className="global-container">
+              <Home />
+            </div>
+          </Loader>
+          <MainTitle />
         </Cursor>
         <Header
           isLoaded={this.state.loaded}

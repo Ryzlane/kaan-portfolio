@@ -48,5 +48,4 @@ Header.propTypes = {
   handleLeaveMenu: PropTypes.func.isRequired
 }
 
-
 export default Header

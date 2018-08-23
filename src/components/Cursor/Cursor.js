@@ -27,7 +27,6 @@ class Cursor extends React.Component {
         this.cursorAround.current.style.top = isHoverMenuPosition.top + 'px'
         this.cursor.current.style.left = isHoverMenuPosition.left + 'px'
         this.cursor.current.style.top = isHoverMenuPosition.top + 'px'
-        console.log('not logo')
     }
   }
 
