@@ -1,10 +1,10 @@
 import React from 'react'
 import BackgroundGreen from 'assets/visuals/green-back.jpg'
 import FrontGreen from 'assets/visuals/green-front.png'
-// import BackgroundTesla from 'assets/visuals/TESLA-back.png'
-// import FrontTesla from 'assets/visuals/TESLA-front.png'
-// import BackgroundVoltaire from 'assets/visuals/VOLTAIRE-back.png'
-// import FrontVoltaire from 'assets/visuals/VOLTAIRE-front.png'
+// import BackgroundTesla from 'assets/visuals/tesla-back.jpg'
+// import FrontTesla from 'assets/visuals/tesla-front.png'
+// import BackgroundVoltaire from 'assets/visuals/voltaire-back.jpg'
+// import FrontVoltaire from 'assets/visuals/voltaire-front.png'
 
 import './Home.scss'
 

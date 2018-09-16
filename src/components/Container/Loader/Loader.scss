@@ -1,0 +1,28 @@
+@import 'styles/variables.scss';
+
+.loader-container {
+  position: absolute;
+  width: 100%;
+  height: 520px;
+  top: 130px;
+
+  &__background {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 66%;
+    height: 100%;
+    display: flex;
+
+    &__left, &__right {
+      width: 50%;
+      background: $beige;
+      transition: all 1s;
+    }
+
+    &__right {
+      align-self: flex-end;
+      transform-origin: 100% 0%;
+    }
+  }
+}

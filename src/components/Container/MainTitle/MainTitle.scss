@@ -1,6 +1,7 @@
 @import 'styles/variables.scss';
 
 .main-title-container {
+  pointer-events: none;
   position: relative;
   height: 100%;
   width: 100%;
