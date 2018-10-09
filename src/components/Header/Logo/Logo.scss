@@ -5,7 +5,7 @@
   width: 75px;
   height: 30px;
 
-  .logo__crown {
+  &__crown {
     position: absolute;
     left: 50%;
     top: 0;
@@ -23,7 +23,7 @@
     top: 0;
   }
 
-  .logo__text {
+  &__text {
     position: absolute;
     left: 50%;
     top: 50%;

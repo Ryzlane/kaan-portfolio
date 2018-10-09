@@ -9,18 +9,15 @@ import FrontGreen from 'assets/visuals/green-front.png'
 class Home extends React.Component {
   render() {
     return (
-      <div className='home'>
-        <div className="home__visuals">
-          <div className='visuals__background'>
+      <div className='home__container'>
+        <div className="home__container__visuals">
+          <div className='home__container__visuals__background'>
             <img src={BackgroundGreen} alt='background' />
-            <div className="visuals__background__filter"></div>
+            <div className="home__container__visuals__background__filter"></div>
           </div>
-          <div className='visuals__front'>
+          <div className='home__container__visuals__front'>
             <img src={FrontGreen} alt='illustration' />
           </div>
-          {/* <div className='home__title-container'>
-            <h1 className='home__title-container__title'>beoplay</h1>
-          </div> */}
         </div>
       </div>
     )

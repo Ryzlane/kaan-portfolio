@@ -9,9 +9,9 @@
   &__vertical {
     position: absolute;
     top: 0;
-    border: solid 0.5px $white;
     height: 100%;
     width: 0px;
+    border: solid 0.5px $white;
 
     &--1 {
       left: 17%;
@@ -30,9 +30,9 @@
   &__horizontal {
     position: absolute;
     left: 0;
-    border: solid 0.5px $white;
     width: 100%;
     height: 0px;
+    border: solid 0.5px $white;
 
     &--1 {
       top: 130px;

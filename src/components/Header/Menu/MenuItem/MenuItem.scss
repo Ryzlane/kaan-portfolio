@@ -3,25 +3,11 @@
   100% { transform: translateX(-50%) translateY(-50%) rotate(360deg) };
 }
 
-.menu__menu-item {
+.menu__container__item {
   pointer-events: initial;
   position: relative;
   width: 60px;
   height: 60px;
-
-  &:hover {
-    polygon, rect {
-      stroke: $electric_blue !important;
-    }
-    img {
-      display: inherit;
-      pointer-events: none;
-      animation-name: hover_rotation;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-    }
-  }
 
   img {
     display: none;
@@ -37,5 +23,20 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:hover {
+    polygon, rect {
+      stroke: $electric_blue !important;
+    }
+
+    img {
+      display: inherit;
+      pointer-events: none;
+      animation-name: hover_rotation;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
   }
 }

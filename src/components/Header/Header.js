@@ -7,44 +7,40 @@ import Logo from './Logo/Logo'
 
 
 class Header extends React.Component {
- render() {
+  static propTypes = {
+    isLoaded: PropTypes.bool.isRequired,
+    isHoverMenu: PropTypes.bool.isRequired,
+    handleHoverMenu: PropTypes.func.isRequired,
+    handleLeaveMenu: PropTypes.func.isRequired
+  }
+  render() {
    const { isHoverMenu, handleHoverMenu, handleLeaveMenu, isLoaded } = this.props
    return (
-     <header className='header-container'>
-       <Logo
-         isHoverMenu={isHoverMenu}
-         handleHoverMenu={handleHoverMenu}
-         handleLeaveMenu={handleLeaveMenu}
-       />
-       {
-         isLoaded &&
-          <Menu>
-            <div className='menu__menu-container'>
-              <MenuItem 
-                menuType='work'
-                isHoverMenu={isHoverMenu}
-                handleHoverMenu={handleHoverMenu}
-                handleLeaveMenu={handleLeaveMenu}
-              />
-              <MenuItem 
-                menuType='about'
-                isHoverMenu={isHoverMenu}
-                handleHoverMenu={handleHoverMenu}
-                handleLeaveMenu={handleLeaveMenu}
-              />
-            </div>
-          </Menu>
-       }
+     <header className='header'>
+      <Logo
+        isHoverMenu={isHoverMenu}
+        handleHoverMenu={handleHoverMenu}
+        handleLeaveMenu={handleLeaveMenu}
+      />
+      <Menu>
+        <div className='menu__container'>
+          <MenuItem
+            menuType='work'
+            isHoverMenu={isHoverMenu}
+            handleHoverMenu={handleHoverMenu}
+            handleLeaveMenu={handleLeaveMenu}
+          />
+          <MenuItem 
+            menuType='about'
+            isHoverMenu={isHoverMenu}
+            handleHoverMenu={handleHoverMenu}
+            handleLeaveMenu={handleLeaveMenu}
+          />
+        </div>
+      </Menu>
      </header>
    )
- }
-}
-
-Header.propTypes = {
-  isLoaded: PropTypes.bool.isRequired,
-  isHoverMenu: PropTypes.bool.isRequired,
-  handleHoverMenu: PropTypes.func.isRequired,
-  handleLeaveMenu: PropTypes.func.isRequired
+  }
 }
 
 export default Header

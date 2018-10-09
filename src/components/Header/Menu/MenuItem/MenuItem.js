@@ -13,8 +13,8 @@ class MenuItem extends React.Component {
   render() {
     const { menuType, handleHoverMenu, handleLeaveMenu } = this.props
     return (
-      <div ref={this.menuItem} className='menu__menu-item' onMouseEnter={() => { handleHoverMenu(this.menuItem) }} onMouseLeave={() => { handleLeaveMenu() }}>
-        <div className={`menu-item__${menuType}`}>
+      <div ref={this.menuItem} className='menu__container__item' onMouseEnter={() => { handleHoverMenu(this.menuItem) }} onMouseLeave={() => { handleLeaveMenu() }}>
+        <div>
         {
           menuType === 'work' ?
             <div>

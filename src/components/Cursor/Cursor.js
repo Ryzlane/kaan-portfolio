@@ -51,12 +51,12 @@ class Cursor extends React.Component {
     let isHoverMenuType = !isHoverMenu ? '' : isHoverMenuPosition ? 'is-hover-menu' : 'is-hover-logo'
     return (
       <div  ref={this.globalCursorContainer} 
-            className={`global-cursor-container ${isHoverMenuType}`}
+            className={`cursor ${isHoverMenuType}`}
             onMouseMove={this.handleMouseMove}
             onMouseDown={this.handleMouseDown}
             onMouseUp={this.handleMouseUp}>
-        <div ref={this.cursorAround} className='cursor-around'></div>
-        <div ref={this.cursor} className='cursor'></div>
+        <div ref={this.cursorAround} className='cursor__around'></div>
+        <div ref={this.cursor} className='cursor__point'></div>
         {this.props.children}
       </div>
     )

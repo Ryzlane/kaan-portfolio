@@ -55,12 +55,12 @@ class Loader extends React.Component {
 
   render() {
     return (
-      <div className='loader-container'>
+      <div className='loader'>
         {
           !this.state.loaded ?
-            <div className='loader-container__background'>
-              <div ref={this.loaderContainerRef} className='loader-container__background__left' style={{ height: `${loading}%` }}></div>
-              <div className='loader-container__background__right' style={{ height: `${loading}%` }}></div>
+            <div className='loader__background'>
+              <div ref={this.loaderContainerRef} className='loader__background__left' style={{ height: `${loading}%` }}></div>
+              <div className='loader__background__right' style={{ height: `${loading}%` }}></div>
             </div>
           :
           this.props.children
