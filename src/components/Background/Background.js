@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Background.scss'
-
 class Background extends React.Component {
+  static propTypes = {
+    backgroundState: PropTypes.string
+  }
   constructor(props) {
     super(props)
 
@@ -13,20 +14,16 @@ class Background extends React.Component {
   }
   render() {
     return (
-      <div className='lines-container'>
-        <div className='vertilines vertiline1'></div>
-        <div className='vertilines vertiline2'></div>
-        <div className='vertilines vertiline3'></div>
-        <div className='horilines horiline1'></div>
-        <div className='horilines horiline2'></div>
-        <div className='horilines horiline3'></div>
+      <div className='lines'>
+        <div className='lines__vertical lines__vertical--1'></div>
+        <div className='lines__vertical lines__vertical--2'></div>
+        <div className='lines__vertical lines__vertical--3'></div>
+        <div className='lines__horizontal lines__horizontal--1'></div>
+        <div className='lines__horizontal lines__horizontal--2'></div>
+        <div className='lines__horizontal lines__horizontal--3'></div>
       </div>
     )
   }
-}
-
-Background.propTypes = {
-  backgroundState: PropTypes.string
 }
 
 export default Background

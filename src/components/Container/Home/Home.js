@@ -6,8 +6,6 @@ import FrontGreen from 'assets/visuals/green-front.png'
 // import BackgroundVoltaire from 'assets/visuals/voltaire-back.jpg'
 // import FrontVoltaire from 'assets/visuals/voltaire-front.png'
 
-import './Home.scss'
-
 class Home extends React.Component {
   render() {
     return (

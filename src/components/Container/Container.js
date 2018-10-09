@@ -1,5 +1,4 @@
 import React from 'react'
-import './Container.scss'
 
 import Background from 'components/Background/Background'
 import Cursor from 'components/Cursor/Cursor'
@@ -38,14 +37,14 @@ import Home from './Home/Home'
   render() {
     const isHoverMenuPosition = this.state.menuItem ? this.state.menuItem.current.getBoundingClientRect() : undefined
     return (
-      <div className='background-container'>
+      <div className='background'>
         <Background backgroundState='initial'/>
         <Cursor 
             isHoverMenu={this.state.isHoverMenu} 
             isHoverMenuPosition={isHoverMenuPosition}
         >
           <Loader>
-            <div className="global-container">
+            <div className="home">
               <Home />
             </div>
           </Loader>

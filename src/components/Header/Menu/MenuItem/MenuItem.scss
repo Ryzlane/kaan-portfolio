@@ -1,5 +1,3 @@
-@import 'styles/variables.scss';
-
 @keyframes hover_rotation {
   0% { transform: translateX(-50%) translateY(-50%) rotate(0deg) };
   100% { transform: translateX(-50%) translateY(-50%) rotate(360deg) };

@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import WorkCircle from 'assets/menu/work-hover.png'
 import AboutCircle from 'assets/menu/about-hover.png'
 
-import './MenuItem.scss'
-
 class MenuItem extends React.Component {
   constructor(props) {
     super(props)

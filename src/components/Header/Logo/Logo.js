@@ -4,7 +4,6 @@ import Vivus from 'vivus'
 import LogoText from './LogoText'
 import LogoFrame from 'assets/logo/logoframe.svg'
 import LogoCrown from 'assets/logo/logocrown.svg'
-import './Logo.scss'
 
 class Logo extends React.Component {
   constructor(props) {

@@ -1,6 +1,4 @@
-@import 'styles/variables.scss';
-
-.lines-container {
+.lines {
   top: 0;
   left: 0;
   width: 100%;
@@ -8,45 +6,45 @@
   position: absolute;
   z-index: 0;
 
-  .vertilines {
+  &__vertical {
     position: absolute;
     top: 0;
     border: solid 0.5px $white;
     height: 100%;
     width: 0px;
+
+    &--1 {
+      left: 17%;
+    }
+
+    &--2 {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    &--3 {
+      right: 17%;
+    }
   }
   
-  .vertiline1 {
-    left: 17%;
-  }
-  
-  .vertiline2 {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .vertiline3 {
-    right: 17%;
-  }
-  
-  .horilines {
+  &__horizontal {
     position: absolute;
     left: 0;
     border: solid 0.5px $white;
     width: 100%;
     height: 0px;
-  }
-  
-  .horiline1 {
-    top: 130px;
-  }
-  
-  .horiline2 {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .horiline3 {
-    bottom: 130px;
+
+    &--1 {
+      top: 130px;
+    }
+    
+    &--2 {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    &--3 {
+      bottom: 130px;
+    }
   }
 }

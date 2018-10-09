@@ -8,7 +8,6 @@ import BackgroundTesla from 'assets/visuals/tesla-back.jpg'
 import FrontTesla from 'assets/visuals/tesla-front.png'
 import BackgroundVoltaire from 'assets/visuals/voltaire-back.jpg'
 import FrontVoltaire from 'assets/visuals/voltaire-front.png'
-import './Loader.scss'
 
 const preloader = new ImagePreloader()
 const images = [BackgroundGreen, FrontGreen, BackgroundTesla, FrontTesla, BackgroundVoltaire, FrontVoltaire]
@@ -28,29 +27,44 @@ class Loader extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      preload: false,
+      loaded: false
+    }
     this.loaderContainerRef = React.createRef()
   }
 
   componentDidMount() {
     preloader.preload(images)
     .then(() => {
-      this.setState({preload: true});
+      this.setState({ preload: true });
     })
   }
 
   componentDidUpdate() {
-    if (this.loaderContainerRef.current.style.height === '100%') {
-      console.log('loader ended!')
+    if (loading === 100) {
+      setTimeout(
+        function() {
+            this.setState({loaded: true});
+        }
+        .bind(this),
+        3000
+    )
     }
   }
 
   render() {
     return (
       <div className='loader-container'>
+        {
+          !this.state.loaded ?
             <div className='loader-container__background'>
               <div ref={this.loaderContainerRef} className='loader-container__background__left' style={{ height: `${loading}%` }}></div>
               <div className='loader-container__background__right' style={{ height: `${loading}%` }}></div>
             </div>
+          :
+          this.props.children
+        }
       </div>
     )
   }
