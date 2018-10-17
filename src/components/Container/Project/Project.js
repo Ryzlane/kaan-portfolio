@@ -1,22 +1,21 @@
 import React from 'react'
-import BackgroundGreen from 'assets/visuals/green-back.jpg'
-import FrontGreen from 'assets/visuals/green-front.png'
-// import BackgroundTesla from 'assets/visuals/tesla-back.jpg'
-// import FrontTesla from 'assets/visuals/tesla-front.png'
-// import BackgroundVoltaire from 'assets/visuals/voltaire-back.jpg'
-// import FrontVoltaire from 'assets/visuals/voltaire-front.png'
+import PropTypes from 'prop-types'
 
 class Project extends React.Component {
+  static propTypes = {
+    project: PropTypes.object.isRequired
+  }
   render() {
+    const { project } = this.props
     return (
       <div className='project__container'>
         <div className="project__container__visuals">
           <div className='project__container__visuals__background'>
-            <img src={BackgroundGreen} alt='background' />
+            <img src={project.backgroundImage} alt='background' />
             <div className="project__container__visuals__background__filter"></div>
           </div>
           <div className='project__container__visuals__front'>
-            <img src={FrontGreen} alt='illustration' />
+            <img src={project.frontImage} className={project.className} alt='illustration' />
           </div>
         </div>
       </div>

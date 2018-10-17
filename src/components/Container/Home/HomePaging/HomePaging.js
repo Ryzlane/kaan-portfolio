@@ -8,9 +8,9 @@ class HomePaging extends Component {
   render() {
     return (
       <div className='home-paging'>
-        <div className="home-paging__position"></div>
+        <div className="home-paging__position home-paging__text">01</div>
         <div className="home-paging__line"></div>
-        <div className="home-paging__total"></div>
+        <div className="home-paging__total home-paging__text">04</div>
       </div>
     )
   }
