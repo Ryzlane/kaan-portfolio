@@ -35,7 +35,7 @@ preloader.onProgress = function() {
     this.state = {
       preload: false,
       loaded: false,
-      loading,
+      stateLoading: 0,
       isHoverMenu: false,
       menuItem: undefined // to retrieve the position of the element we are hover and send it to cursor
     }
@@ -52,6 +52,12 @@ preloader.onProgress = function() {
   }
 
   componentDidUpdate() {
+    const oldState = {...this.state}
+    if (oldState.stateLoading !== loading) {
+      console.log('loading changed!')
+      this.setState({ stateLoading: loading })
+    }
+
     if (loading === 100) {
       setTimeout(
         function() {
