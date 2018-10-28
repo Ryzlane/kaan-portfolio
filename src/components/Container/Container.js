@@ -37,7 +37,7 @@ import About from './About/About'
     const isHoverMenuPosition = this.state.menuItem ? this.state.menuItem.current.getBoundingClientRect() : undefined
     return (
       <div className='global-container'>
-        <Background backgroundState='initial'/>
+        <Background backgroundState={this.props.location.pathname === '/' ? 'initial' : 'changed'}/>
         <Cursor 
           isHoverMenu={this.state.isHoverMenu} 
           isHoverMenuPosition={isHoverMenuPosition}

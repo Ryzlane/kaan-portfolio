@@ -6,6 +6,10 @@
   position: absolute;
   z-index: 0;
 
+  > div.false {
+    display: none;
+  }
+
   &__vertical {
     position: absolute;
     top: 0;

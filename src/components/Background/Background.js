@@ -13,14 +13,16 @@ class Background extends React.Component {
     }
   }
   render() {
+    const { backgroundState } = this.props
+    const isVisible = backgroundState === 'initial'
     return (
       <div className='lines'>
-        <div className='lines__vertical lines__vertical--1'></div>
+        <div className={`lines__vertical lines__vertical--1 ${isVisible}`}></div>
         <div className='lines__vertical lines__vertical--2'></div>
-        <div className='lines__vertical lines__vertical--3'></div>
-        <div className='lines__horizontal lines__horizontal--1'></div>
-        <div className='lines__horizontal lines__horizontal--2'></div>
-        <div className='lines__horizontal lines__horizontal--3'></div>
+        <div className={`lines__vertical lines__vertical--3 ${isVisible}`}></div>
+        <div className={`lines__horizontal lines__horizontal--1 ${isVisible}`}></div>
+        <div className={`lines__horizontal lines__horizontal--2 ${isVisible}`}></div>
+        <div className={`lines__horizontal lines__horizontal--3 ${isVisible}`}></div>
       </div>
     )
   }
