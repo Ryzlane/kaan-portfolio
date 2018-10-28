@@ -43,7 +43,7 @@ import Home from './Home/Home'
           <Home />
         </Cursor>
         <Header
-          isLoaded={this.state.loaded}
+          isLoaded={true}
           isHoverMenu={this.state.isHoverMenu}
           handleHoverMenu={this.handleHoverMenu}
           handleLeaveMenu={this.handleLeaveMenu}

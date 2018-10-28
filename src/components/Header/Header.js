@@ -22,22 +22,25 @@ class Header extends React.Component {
         handleHoverMenu={handleHoverMenu}
         handleLeaveMenu={handleLeaveMenu}
       />
-      <Menu>
-        <div className='menu__container'>
-          <MenuItem
-            menuType='work'
-            isHoverMenu={isHoverMenu}
-            handleHoverMenu={handleHoverMenu}
-            handleLeaveMenu={handleLeaveMenu}
-          />
-          <MenuItem 
-            menuType='about'
-            isHoverMenu={isHoverMenu}
-            handleHoverMenu={handleHoverMenu}
-            handleLeaveMenu={handleLeaveMenu}
-          />
-        </div>
-      </Menu>
+      {
+        isLoaded &&
+        <Menu>
+          <div className='menu__container'>
+            <MenuItem
+              menuType='work'
+              isHoverMenu={isHoverMenu}
+              handleHoverMenu={handleHoverMenu}
+              handleLeaveMenu={handleLeaveMenu}
+            />
+            <MenuItem 
+              menuType='about'
+              isHoverMenu={isHoverMenu}
+              handleHoverMenu={handleHoverMenu}
+              handleLeaveMenu={handleLeaveMenu}
+            />
+          </div>
+        </Menu>
+      }
      </header>
    )
   }
