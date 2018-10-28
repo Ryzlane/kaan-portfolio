@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Container from './Container/Container'
-import About from './About/About'
 
 // All the styles of the application are imported in this file, so that we don't have multiple imports in the header
 import 'styles/index.scss';
