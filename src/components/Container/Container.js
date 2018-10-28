@@ -1,9 +1,11 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 
 import Background from 'components/Background/Background'
 import Cursor from 'components/Cursor/Cursor'
 import Header from 'components/Header/Header'
 import Home from './Home/Home'
+import About from './About/About'
 
  class Container extends React.Component {
   constructor(props) {
@@ -40,7 +42,8 @@ import Home from './Home/Home'
           isHoverMenu={this.state.isHoverMenu} 
           isHoverMenuPosition={isHoverMenuPosition}
         >
-          <Home />
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
         </Cursor>
         <Header
           isLoaded={true}
