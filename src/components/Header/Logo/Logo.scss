@@ -1,43 +1,48 @@
 .logo {
-  pointer-events: initial;
-  position: relative;
-  margin-left: 15px;
-  width: 75px;
-  height: 30px;
-
-  &__crown {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    transition-property: transform;
-    transition-duration: 1s;
-  }
-
-  #logo__frame {
-    transition: all 1s;
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    top: -2px;
-  }
-
-  &__text {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  &:hover {
-    .logo__text svg g {
-      transition: all 1.5s;
-      stroke: $electric_blue;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  
+  &__container {
+    pointer-events: initial;
+    position: relative;
+    width: 75px;
+    height: 30px;
+  
+    &__crown {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      transition-property: transform;
+      transition-duration: 1s;
     }
-
-    .logo__crown {
-      transform: translateX(-50%) translateY(-100%);
+  
+    #logo__frame {
+      transition: all 1s;
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      top: -2px;
+    }
+  
+    &__text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  
+    &:hover {
+      .logo__container__text svg g {
+        transition: all 1.5s;
+        stroke: $electric_blue;
+      }
+  
+      .logo__container__crown {
+        transform: translateX(-50%) translateY(-100%);
+      }
     }
   }
 }
