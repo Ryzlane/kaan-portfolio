@@ -79,7 +79,7 @@ class Home extends React.Component {
       }
     } else {
       console.log('scroll down')
-      if (position !== projectsLength) {
+      if (position !== projectsLength - 1) {
         this.setState({ position: position + 1 })
       }
     }
