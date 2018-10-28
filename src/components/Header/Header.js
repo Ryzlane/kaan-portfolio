@@ -17,11 +17,13 @@ class Header extends React.Component {
    const { isHoverMenu, handleHoverMenu, handleLeaveMenu, isLoaded } = this.props
    return (
      <header className='header'>
-      <Logo
-        isHoverMenu={isHoverMenu}
-        handleHoverMenu={handleHoverMenu}
-        handleLeaveMenu={handleLeaveMenu}
-      />
+      <div className='logo'>
+        <Logo
+          isHoverMenu={isHoverMenu}
+          handleHoverMenu={handleHoverMenu}
+          handleLeaveMenu={handleLeaveMenu}
+        />
+      </div>
       {
         isLoaded &&
         <Menu>

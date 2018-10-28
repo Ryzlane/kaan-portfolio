@@ -18,7 +18,7 @@ class Logo extends React.Component {
   }
 
   componentDidMount() {
-    this.setState ({ vivus: new Vivus('logo__frame', {duration: 100, start: 'manual', file: LogoFrame}, null) })
+    this.setState ({ vivus: new Vivus('logo__container__frame', {duration: 100, start: 'manual', file: LogoFrame}, null) })
   }
 
   handleMouseEnter() {
@@ -36,10 +36,10 @@ class Logo extends React.Component {
 
   render() {
     return (
-      <div className='logo' onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()}>
-        <div className="logo__crown"><img src={LogoCrown} alt=""/></div>
-        <div id="logo__frame"></div>
-        <div className="logo__text">
+      <div className='logo__container' onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()}>
+        <div className="logo__container__crown"><img src={LogoCrown} alt="logo crown"/></div>
+        <div id="logo__container__frame"></div>
+        <div className="logo__container__text">
           <LogoText />
         </div>
       </div>
