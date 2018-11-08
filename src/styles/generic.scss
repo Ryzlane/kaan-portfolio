@@ -2,8 +2,20 @@
 .about-text {
   font-family: 'Muli';
   font-size: 30px;
-  font-weight: 600;
   color: $soft_grey;
+
+  &--modified {
+    font-weight: 600;
+    color: $deep_grey;
+  }
+}
+
+.about-text-title {
+  height: 38px;
+  font-family: Muli;
+  font-size: 30px;
+  font-weight: bold;
+  color: $electric-blue;
 }
 
 .brief-project {
